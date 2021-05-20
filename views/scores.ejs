@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="RapidTech1898">
+    	<meta name="keywords" content="development webdesign finance">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<title>RapidTech1898</title>
+		<script src="https://kit.fontawesome.com/bf5e040b82.js" crossorigin="anonymous"></script>
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="../css/basic.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">		
+        
+	</head>
+    <body>
+        <div class="container py-5">
+            <header class="text-center text-white">
+            <h1 class="display-4">Bootstrap Datatables</h1>
+            <p class="lead mb-0">Using Bootstrap 4 and <a href="https://datatables.net/examples/styling/bootstrap4.html" class="text-white font-italic">
+                <u>Datatables</u></a>, add interaction controlsto your HTML tables.</p>
+            <p class="font-italic">Snippet By
+                <a href="https://bootstrapious.com" class="text-white">
+                <u>Bootstrapious</u>
+                </a>
+            </p>
+            </header>
+            <div class="row py-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="card rounded shadow border-0">
+                <div class="card-body p-5 bg-white rounded">
+                    <div class="table-responsive">
+                    <table id="example" style="width:100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Calc Date</th>
+                                <th>Index</th>
+                                <th>Market Cap</th>
+                                <th>Currency</th>
+                                <th>Sector</th>
+                                <th>Industry</th>
+                                <th>Cap</th>
+                                <th>Finance Stock?</th>
+                                <th>Last Earning</th>
+                                <th>Score</th>
+                                <th>Recommendation</th>
+                            </tr>
+                        </thead>
+                        <tbody>   
+                            <% rows.forEach( el => { %>
+                                <tr class='TickerRow' data-id='<%=el.ticker%>'>
+                                    <td><%= el.ticker %></td>
+                                    <td><%= el.calcDate %></td>
+                                    <td><%= el.indexName %></td>
+                                    <td><%= el.markeCap %></td>
+                                </tr>
+
+                                <!-- <li class='todoItem' data-id='<%=el._id%>'>
+                                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                                    <span class='del'> Delete </span>
+                                </li> -->
+                            <% }) %>                                
+                         </tbody>
+                    </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/dataTables.bootstrap4.min.js"></script>    
+        <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>        
+        <script type="text/javascript" src="../js/jquery-3.3.1.slim.min.js"></script>    
+        <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>    
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>    
+    </body>
+</html>
