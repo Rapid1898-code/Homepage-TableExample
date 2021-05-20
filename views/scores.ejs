@@ -55,9 +55,17 @@
                             <% rows.forEach( el => { %>
                                 <tr class='TickerRow' data-id='<%=el.ticker%>'>
                                     <td><%= el.ticker %></td>
-                                    <td><%= el.calcDate %></td>
+                                    <td><%= el.calcDate.toISOString().split('T')[0] %></td>
                                     <td><%= el.indexName %></td>
-                                    <td><%= el.markeCap %></td>
+                                    <td><%= el.marketCap %></td>
+                                    <td><%= el.currency %></td>
+                                    <td><%= el.sector %></td>
+                                    <td><%= el.industry %></td>
+                                    <td><%= el.cap %></td>
+                                    <td><%= el.financeStock %></td>
+                                    <td><%= el.lastEarnings.toISOString().split('T')[0] %></td>
+                                    <td><%= el.scoreFull %></td>
+                                    <td><%= el.recommendFull %></td>
                                 </tr>
 
                                 <!-- <li class='todoItem' data-id='<%=el._id%>'>
