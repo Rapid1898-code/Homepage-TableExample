@@ -9,20 +9,19 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 		<title>RapidTech1898</title>
 		<script src="https://kit.fontawesome.com/bf5e040b82.js" crossorigin="anonymous"></script>
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="../css/basic.css">
+		<!-- external CSS link -->      		
+        <link rel="stylesheet" href="../css/basic.css">
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
 		<link rel="stylesheet" href="../css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">		
-        
 	</head>
     <body>
         <div class="container py-5">
             <header class="text-center text-white">
-            <h1 class="display-4">Bootstrap Datatables</h1>
+            <h1 class="display-4">Levermann Scores</h1>
             <p class="lead mb-0">Using Bootstrap 4 and <a href="https://datatables.net/examples/styling/bootstrap4.html" class="text-white font-italic">
-                <u>Datatables</u></a>, add interaction controlsto your HTML tables.</p>
+                <u>Datatables</u></a></p>
             <p class="font-italic">Snippet By
                 <a href="https://bootstrapious.com" class="text-white">
                 <u>Bootstrapious</u>
@@ -53,6 +52,12 @@
                         </thead>
                         <tbody>   
                             <% rows.forEach( el => { %>
+                                <% if (el.lastEarnings !== "0000-00-00" && el.lastEarnings !== null) { %>
+                                    <% console.log(`Last Earnings: ${el.lastEarnings}`) %>
+                                    <% tmpLastEarning = el.lastEarnings.toISOString().split('T')[0] %>
+                                <% } else { %>
+                                    <% tmpLastEarning = "N/A" %>
+                                <% } %>
                                 <tr class='TickerRow' data-id='<%=el.ticker%>'>
                                     <td><%= el.ticker %></td>
                                     <td><%= el.calcDate.toISOString().split('T')[0] %></td>
@@ -62,17 +67,12 @@
                                     <td><%= el.sector %></td>
                                     <td><%= el.industry %></td>
                                     <td><%= el.cap %></td>
-                                    <td><%= el.financeStock %></td>
-                                    <td><%= el.lastEarnings.toISOString().split('T')[0] %></td>
+                                    <td><%= el.financeStock %></td>                                     
+                                    <td><%= (el.lastEarnings !== "0000-00-00" && el.lastEarnings !== null) ? el.lastEarnings.toISOString().split('T')[0] : 'N/A' %></td>                                
                                     <td><%= el.scoreFull %></td>
                                     <td><%= el.recommendFull %></td>
                                 </tr>
-
-                                <!-- <li class='todoItem' data-id='<%=el._id%>'>
-                                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                                    <span class='del'> Delete </span>
-                                </li> -->
-                            <% }) %>                                
+                            <% }) %>                                                                                
                          </tbody>
                     </table>
                     </div>

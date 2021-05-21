@@ -4,3 +4,7 @@ body {
     background-color: #90e0ef;
     background-image: linear-gradient(147deg, #90e0ef 0%, #023e8a 100%);
   }
+
+div.container {
+    width: 80%;
+}
