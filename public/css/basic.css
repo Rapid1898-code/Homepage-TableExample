@@ -1,10 +1,21 @@
 body {
     min-height: 100vh;
-  
     background-color: #90e0ef;
     background-image: linear-gradient(147deg, #90e0ef 0%, #023e8a 100%);
-  }
+}
 
 div.container {
-    width: 80%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
+
+div.card-body {
+  padding: 0;
+}
+
+div.table-responsive {
+  width: 100%;
+}
+
+/* <div class="row py-5"> */
