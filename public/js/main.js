@@ -1,13 +1,20 @@
 $(function() {
     $(document).ready(function() {
-      // $('#example').DataTable();
-
       $('#example').DataTable( {
-        autoWidth: false, //step 1
+        autoWidth: false,
         columnDefs: [
-          { width: '900px', targets: 0 }, //step 2, column 1 out of 4
-          { width: '900px', targets: 1 }, //step 2, column 2 out of 4
-          { width: '100px', targets: 2 }  //step 2, column 3 out of 4
+          { width: '10px', targets: 0 },
+          { width: '100px', targets: 1 },
+          { width: '10px', targets: 2 },
+          { width: '10px', targets: 3 },
+          { width: '1px', targets: 4 },
+          { width: '100px', targets: 5 },
+          { width: '200px', targets: 6 },
+          { width: '100px', targets: 7 },
+          { width: '1%', targets: 8 },
+          { width: '10px', targets: 9 },
+          { width: '1%', targets: 10 },
+          { width: '10px', targets: 11 }
         ]
       } );
 
