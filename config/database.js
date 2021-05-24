@@ -11,14 +11,14 @@ const connectDB = mysql.createConnection({
   // user: 'rapidtec_Rapid1898',  
   // password: process.env.DBPW_A2HOSTED,  
   // database: 'rapidtec_levermann'  
-});
+})
 
 connectDB.connect((err) => {
     if(err){
-      console.log('Error connecting to Db');
+      console.log('Error connecting to Db')
       return;
     }
-    console.log('Connection established');
-  }); 
+    console.log('Connection established')
+  })
 
 module.exports = connectDB
