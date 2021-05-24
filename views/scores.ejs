@@ -30,6 +30,7 @@
                         <thead>
                             <tr>
                                 <th>Ticker</th>
+                                <th>Name</th>
                                 <th>Calc Date</th>
                                 <th>Index</th>
                                 <th>Market Cap</th>
@@ -45,14 +46,9 @@
                         </thead>
                         <tbody>   
                             <% rows.forEach( el => { %>
-                                <% if (el.lastEarnings !== "0000-00-00" && el.lastEarnings !== null) { %>
-                                    <% console.log(`Last Earnings: ${el.lastEarnings}`) %>
-                                    <% tmpLastEarning = el.lastEarnings.toISOString().split('T')[0] %>
-                                <% } else { %>
-                                    <% tmpLastEarning = "N/A" %>
-                                <% } %>
                                 <tr class='TickerRow' data-id='<%=el.ticker%>'>
                                     <td><%= el.ticker %></td>
+                                    <td><%= el.stockName %></td>
                                     <td><%= el.calcDate.toISOString().split('T')[0] %></td>
                                     <td><%= el.indexName %></td>
                                     <td><%= el.marketCap %></td>
@@ -61,7 +57,7 @@
                                     <td><%= el.industry %></td>
                                     <td><%= el.cap %></td>
                                     <td><%= el.financeStock %></td>                                     
-                                    <td><%= (el.lastEarnings !== "0000-00-00" && el.lastEarnings !== null) ? el.lastEarnings.toISOString().split('T')[0] : 'N/A' %></td>                                
+                                    <td><%= el.lastEarnings %></td>                                
                                     <td><%= el.scoreFull %></td>
                                     <td><%= el.recommendFull %></td>
                                 </tr>
