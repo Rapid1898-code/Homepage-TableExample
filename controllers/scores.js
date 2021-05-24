@@ -16,7 +16,7 @@ module.exports = {
                     res.render('scores.ejs', {rows: rows})                            
                 });
 
-        }catch(err){
+        } catch(err){
             console.log(err)
         }
     }
