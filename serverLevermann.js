@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
-const connectDB = require('./config/database')
+const {connectDB} = require('./config/database')
 const logger = require('morgan')
 const mainRoutes = require('./routes/main')
 // const todoRoutes = require('./routes/todos')
 
 require('dotenv').config({path: './config/.env'})
+connectDB()
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
