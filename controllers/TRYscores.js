@@ -1,4 +1,4 @@
-const connectDB = require("../config/database");
+const {connectDB} = require('../config/TRYdatabase')
 
 module.exports = {
     getScores: async (req,res)=>{
