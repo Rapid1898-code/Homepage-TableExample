@@ -34,5 +34,4 @@ const connectDB = async () => {
 //   console.log('Error connecting to Db')  
 // }
 
-
 module.exports = connectDB
