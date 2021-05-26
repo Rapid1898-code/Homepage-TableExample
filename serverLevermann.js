@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
 
-app.use('/', mainRoutes)
+app.use('/serverlevermann', mainRoutes)
 // app.use('/todos', todoRoutes)
 
 app.listen(process.env.PORT, ()=>{

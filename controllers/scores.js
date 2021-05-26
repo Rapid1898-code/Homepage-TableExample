@@ -1,4 +1,5 @@
 const connectDB = require("../config/database");
+require('dotenv').config({path: './config/.env'})
 
 module.exports = {
     getScores: async (req,res)=>{
@@ -6,7 +7,7 @@ module.exports = {
         try {
             const conn = await connectDB();
             const result = await conn.execute
-                ('SELECT * FROM scores')
+                (`SELECT * FROM ${process.env.SCORE_TABLE}`)
             console.log("Reading data from ")
             result[0].forEach((row,idx) => {                
                 if (row.lastEarnings instanceof Date && !isNaN(row.lastEarnings)) {                    
