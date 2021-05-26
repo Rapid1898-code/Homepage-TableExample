@@ -15,7 +15,7 @@ module.exports = {
                 } else {
                     result[0][idx].lastEarnings = "N/A"
                 }
-                // console.log(`${row.ticker} ${row.calcDate} ${row.indexName} ${row.scoreFull}`);
+                console.log(`${row.ticker} ${row.calcDate} ${row.indexName} ${row.scoreFull}`);
                 // console.log(`${typeof row.ticker} ${typeof row.calcDate}`)
                 // console.log(`${row.calcDate.toISOString().split('T')[0]}`)
             });
