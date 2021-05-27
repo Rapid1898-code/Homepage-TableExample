@@ -1,3 +1,7 @@
+// $(document).ready(function() {
+//   $('#example').DataTable();
+// } );
+
 $(function() {
     $(document).ready(function() {
       $('#example').DataTable( {
