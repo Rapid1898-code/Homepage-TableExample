@@ -1,4 +1,4 @@
-const connectDB = require("../config/database");
+const connectDB = require("../config/databaseSQL");
 require('dotenv').config({path: './config/.env'})
 
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
                 } else {
                     result[0][idx].lastEarnings = "N/A"
                 }
+                row.calcDate = row.calcDate.toISOString().split('T')[0]
                 console.log(`${row.ticker} ${row.calcDate} ${row.indexName} ${row.scoreFull}`);
                 // console.log(`${typeof row.ticker} ${typeof row.calcDate}`)
                 // console.log(`${row.calcDate.toISOString().split('T')[0]}`)

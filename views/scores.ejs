@@ -52,10 +52,10 @@
                         </thead>
                         <tbody>   
                             <% rows.forEach( el => { %>
-                                <tr class='TickerRow' data-id='<%=el.ticker%>'>
+                                <tr class='TickerRow' data-id='<%= `${el.ticker} ${el.calcDate}` %>'>
                                     <td><%= el.ticker %></td>
                                     <td><%= el.stockName %></td>
-                                    <td><%= el.calcDate.toISOString().split('T')[0] %></td>
+                                    <td><%= el.calcDate %></td>
                                     <td><%= el.indexName %></td>
                                     <td><%= el.marketCap %></td>
                                     <td><%= el.currency %></td>
@@ -88,6 +88,6 @@
         <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>   
-        <script type="text/javascript" src="/js/main.js"></script>
+        <script type="text/javascript" src="/js/mainServerLevermann.js"></script>
     </body>
 </html>
