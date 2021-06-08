@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const {connectDB} = require('./config/database')
+const {connectDB} = require('./config/databaseSQL')
 const logger = require('morgan')
 const mainRoutes = require('./routes/main')
 // const todoRoutes = require('./routes/todos')
