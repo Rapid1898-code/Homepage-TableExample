@@ -1,4 +1,4 @@
-const connectDB = require("../config/databaseSQL");
+const connectDB = require("../config/database");
 require('dotenv').config({path: './config/.env'})
 
 module.exports = {
